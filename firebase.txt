@@ -20,3 +20,5 @@ database ruleは誰でもにした(そもそもauthをしないので)
 - 変数名
 - 設計(可能なら)
 - 書き方(三項演算子、無理ならどうするのがいいのか)
+
+https://sample-demo-game.firebaseapp.com/
