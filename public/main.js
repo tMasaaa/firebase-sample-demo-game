@@ -6,10 +6,9 @@ import cloudStorage from './src/cloud_storage.js';
 
 // loading initialize once
 init().then(me => {
-   cloudStorage.gameDataOnUpdate(e => {
-       const value = JSON.parse(e.val());
-       if (value) {
-           swit(value, me);
+   cloudStorage.gameDataOnUpdate(data => {
+       if (data) {
+           swit(data, me);
        }
    }); 
 });

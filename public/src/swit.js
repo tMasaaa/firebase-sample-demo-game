@@ -3,6 +3,7 @@ import cloudStorage from './cloud_storage.js';
 
 const swit = (VAL, ME) => {
     const YOU = (ME === 'p1') ? 'p2' : 'p1';
+    // console.log(VAL, ME, YOU, VAL[YOU], VAL[ME]);
     const progress = ~~(Math.random() * 4) * (ME == 'p1' ? 1 : -1);
     const pos = (VAL[ME] + progress) < 1 ? 1 : (VAL[ME] + progress) > 16 ? 16 : (VAL[ME] + progress);
 

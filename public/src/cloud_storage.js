@@ -1,4 +1,5 @@
 'use strict';
+
 const config = {
     apiKey: "AIzaSyBstMUcizSkipYd8tEIcfNpaUL1Y5ZQ_eg",
     authDomain: "sample-demo-game.firebaseapp.com",
@@ -19,5 +20,5 @@ export default {
     setGameData: data => gameData.set(JSON.stringify(data)),
     removeAll: () => sampleGame.remove(),
     removeTicket: () => ticket.remove(),
-    gameDataOnUpdate: func => gameData.on('value', func)
+    gameDataOnUpdate: func => gameData.on('value', e => func(JSON.parse(e.val())))
 }

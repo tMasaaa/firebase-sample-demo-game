@@ -29,13 +29,10 @@ const init = () => {
     });
 };
 
-const initializeData = () => {
-    const dat = {
-        p1: 1,
-        p2: 16,
-        turn: ~~(Math.random() * 2) == 0 ? 'p1' : 'p2'
-    }
-    return JSON.stringify(dat);
-};
+const initializeData = () => ({
+    p1: 1,
+    p2: 16,
+    turn: ~~(Math.random() * 2) == 0 ? 'p1' : 'p2'
+});
 
 export default init;
