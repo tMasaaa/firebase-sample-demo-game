@@ -1,5 +1,7 @@
 'use strict';
-import cloudStorage from './cloud_storage.js';
+import {
+    DB
+} from '../main.js';
 
 const swit = (VAL, ME) => {
     const YOU = (ME === 'p1') ? 'p2' : 'p1';
@@ -25,8 +27,10 @@ const swit = (VAL, ME) => {
             // console.log(progress, VAL['turn'], ME, pos, ':', YOU, VAL[YOU]);
             VAL[ME] = pos;
             VAL['turn'] = YOU;
-            cloudStorage.setGameData(VAL);
+            DB.data.set(JSON.stringify(VAL));
         }
     });
 };
-export default swit;
+export {
+    swit
+};
